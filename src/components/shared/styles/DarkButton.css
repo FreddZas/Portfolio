@@ -1,0 +1,62 @@
+:root {
+    --light-0: #f8f9fa;
+    --light-1: #e9ecef;
+    --light-2: #dee2e6;
+    --dark-0: #495057;
+    --dark-1: #343a40;
+    --dark-2: #212529;
+    --green: #c3c82c;
+    --blue: #2939ff;
+  }
+
+input {
+    position: absolute;
+    top:-99px !important ;  /* Hides the input but doesn't hide the text */
+}
+  
+label {
+  align-items: center;
+  background: var(--light-2);
+  background: url('https://i.ibb.co/ZWmbGbj/etmfdr.gif');
+  background-position: bottom;
+  background-size: cover;
+  border-radius: 35px;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  cursor: pointer;
+  display: flex;
+  height: 60px;
+  position: relative;
+  width: 110px;
+}
+
+#darkButtonMode:checked + label {
+  background: var(--dark-0);
+  background: url('https://i.pinimg.com/originals/94/ff/74/94ff7463a1574221ba6d4ada2c997e0b.gif');
+  background-position: center;
+  background-size: cover;
+}
+
+label .circle__btn {
+  background: radial-gradient(var(--green), transparent);
+  border-radius: 50%;
+  height: 30px;
+  margin: 4px;
+  transition: transform 0.3s ease;
+  width: 30px;
+}
+
+#darkModeButton:checked + label .circle__btn {
+  background: radial-gradient(var(--blue), transparent);
+  transform: translateX(72px);
+}
+
+/* Estilos para el modo oscuro */
+.dark__mode {
+  background-color: #333;
+  color: white;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.dark__mode .nav__bar li a {
+  color: white;
+}
